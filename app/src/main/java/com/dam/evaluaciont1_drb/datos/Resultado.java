@@ -1,6 +1,9 @@
 package com.dam.evaluaciont1_drb.datos;
 
-public class Resultado {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Resultado implements Parcelable {
 
     private String fase;
     private String fecha;
@@ -16,6 +19,15 @@ public class Resultado {
         this.golesEquipo1 = golesEquipo1;
         this.equipo2 = equipo2;
         this.golesEquipo2 = golesEquipo2;
+    }
+
+    protected Resultado(Parcel in) {
+        this.fase = in.readString();
+        this.fecha = in.readString();
+        this.equipo1 = in.readString();
+        this.golesEquipo1 = in.readInt();
+        this.equipo2 = in.readString();
+        this.golesEquipo2 = in.readInt();
     }
 
     public String getFase() {
@@ -77,4 +89,32 @@ public class Resultado {
                 ", golesEquipo2=" + golesEquipo2 +
                 '}';
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.fase);
+        dest.writeString(this.fecha);
+        dest.writeString(this.equipo1);
+        dest.writeInt(this.golesEquipo1);
+        dest.writeString(this.equipo2);
+        dest.writeInt(this.golesEquipo2);
+    }
+
+
+    public static final Creator<Resultado> CREATOR = new Creator<Resultado>() {
+        @Override
+        public Resultado createFromParcel(Parcel in) {
+            return new Resultado(in);
+        }
+
+        @Override
+        public Resultado[] newArray(int size) {
+            return new Resultado[size];
+        }
+    };
 }

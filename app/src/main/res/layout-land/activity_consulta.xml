@@ -7,7 +7,7 @@
     tools:context=".ConsultaActivity"
     android:padding="@dimen/margen"
     >
-    
+
     <TextView
         android:id="@+id/tvConsulta"
         android:layout_width="match_parent"
@@ -17,8 +17,9 @@
         android:textStyle="bold"
         android:layout_marginBottom="@dimen/marginBottom_tv_consulta"
         />
-    
+
     <LinearLayout
+        android:id="@+id/llConsulta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="100"
@@ -26,22 +27,133 @@
         android:layout_margin="@dimen/margen"
         android:orientation="horizontal"
         >
-        
+
         <EditText
+            android:id="@+id/etEquipoConsulta"
             android:layout_width="@dimen/weight_cero_dp"
             android:layout_height="wrap_content"
             android:layout_weight="60"
+            android:textColor="@color/black"
+            android:enabled="false"
             android:hint="@string/hint_et_consulta"
             />
-        
+
         <Button
-            android:id="@+id/btnConsulta"
+            android:id="@+id/btnConsultaSeleccion"
             android:layout_width="@dimen/weight_cero_dp"
             android:layout_height="wrap_content"
             android:layout_weight="40"
-            android:text="@string/txt_btn_limpiarDatos_consulta"
+            android:text="@string/txt_btn_seleccionar"
             />
-        
+
     </LinearLayout>
-    
+
+    <LinearLayout
+        android:id="@+id/llConsulta1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llConsulta"
+        android:weightSum="100"
+        >
+
+        <FrameLayout
+            android:id="@+id/flConsulta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+        <FrameLayout
+            android:id="@+id/flConsulta2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConsulta2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llConsulta1"
+        android:weightSum="100"
+        >
+
+        <FrameLayout
+            android:id="@+id/flConsulta3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+        <FrameLayout
+            android:id="@+id/flConsulta4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConsulta3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llConsulta1"
+        android:weightSum="100"
+        >
+
+        <FrameLayout
+            android:id="@+id/flConsulta5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+        <FrameLayout
+            android:id="@+id/flConsulta6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConsulta4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llConsulta1"
+        android:weightSum="100"
+        >
+
+        <FrameLayout
+            android:id="@+id/flConsulta7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+        <FrameLayout
+            android:id="@+id/flConsulta8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen"
+            android:layout_weight="50"
+            />
+
+    </LinearLayout>
+
 </RelativeLayout>
