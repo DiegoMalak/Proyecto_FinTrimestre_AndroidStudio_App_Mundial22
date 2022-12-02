@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsultaActivity"
+    android:padding="@dimen/margen"
+    >
+
+    <TextView
+        android:id="@+id/tvConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_tv_consulta_titulo"
+        android:textSize="@dimen/txt_tv_titulo_consulta"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/marginBottom_tv_consulta"
+        />
+
+    <LinearLayout
+        android:id="@+id/llConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:layout_below="@+id/tvConsulta"
+        android:layout_margin="@dimen/margen"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/etEquipoConsulta"
+            android:layout_width="@dimen/weight_cero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:hint="@string/hint_et_consulta"
+            />
+
+        <Button
+            android:id="@+id/btnConsultaSeleccion"
+            android:layout_width="@dimen/weight_cero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:text="@string/txt_btn_seleccionar"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flConsulta1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llConsulta"
+        android:layout_margin="@dimen/margen"
+        />
+
+    <FrameLayout
+        android:id="@+id/flConsulta2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flConsulta1"
+        android:layout_margin="@dimen/margen"
+        />
+
+    <FrameLayout
+        android:id="@+id/flConsulta3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flConsulta2"
+        android:layout_margin="@dimen/margen"
+        />
+
+    <FrameLayout
+        android:id="@+id/flConsulta4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flConsulta3"
+        android:layout_margin="@dimen/margen"
+        />
+
+    <FrameLayout
+        android:id="@+id/flConsulta5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flConsulta4"
+        android:layout_margin="@dimen/margen"
+        />
+
+    <FrameLayout
+        android:id="@+id/flConsulta6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flConsulta5"
+        android:layout_margin="@dimen/margen"
+        />
+
+    <FrameLayout
+        android:id="@+id/flConsulta7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flConsulta6"
+        android:layout_margin="@dimen/margen"
+        />
+
+</RelativeLayout>

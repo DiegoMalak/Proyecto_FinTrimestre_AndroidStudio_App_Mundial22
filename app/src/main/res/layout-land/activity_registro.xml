@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margen"
+    tools:context=".RegistroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tvTituloRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_txt_titulo_registro"
+            android:textSize="@dimen/txt_tv_titulo"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/margin_registro_items_landscape"/>
+
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:hint="@string/hint_et_fecha_hora"
+            android:layout_marginBottom="@dimen/margin_registro_items_landscape"
+            />
+
+        <EditText
+            android:id="@+id/etFase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_et_fase"
+            android:layout_marginBottom="@dimen/margin_registro_items_landscape"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginBottom="@dimen/margin_registro_items_landscape">
+
+            <EditText
+                android:id="@+id/etEquipo1"
+                android:layout_width="@dimen/weight_cero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:inputType="text"
+                android:hint="@string/hint_et_equipo1"
+                android:importantForAutofill="no"
+                android:enabled="false"
+                />
+
+            <Button
+                android:id="@+id/btnSeleccionarEquipo1"
+                android:layout_width="@dimen/weight_cero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:text="@string/txt_btn_seleccionar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginBottom="@dimen/margin_registro_items_landscape">
+
+            <EditText
+                android:id="@+id/etEquipo2"
+                android:layout_width="@dimen/weight_cero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:inputType="text"
+                android:hint="@string/hint_et_equipo2"
+                android:importantForAutofill="no"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/btnSeleccionarEquipo2"
+                android:layout_width="@dimen/weight_cero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:text="@string/txt_btn_seleccionar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginBottom="@dimen/margin_registro_items_landscape">
+
+            <EditText
+                android:id="@+id/etGolesEquipo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_et_goles_equipo1"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:importantForAutofill="no"
+                android:layout_weight="45"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guion"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="@dimen/tamanio_guion"
+                android:layout_weight="10"/>
+
+            <EditText
+                android:id="@+id/etGolesEquipo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_et_goles_equipo2"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:importantForAutofill="no"
+                android:layout_weight="45"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnGuardarResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_margin="@dimen/btn_registro_separa"
+            android:text="@string/btn_guardar_resultado"/>
+
+        <Button
+            android:id="@+id/btnLimpiarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_margin="@dimen/btn_registro_separa"
+            android:text="@string/btn_limpiar_datos"/>
+    </LinearLayout>
+
+</RelativeLayout>

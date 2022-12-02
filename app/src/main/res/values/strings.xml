@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Qatar22</string>
+    <string name="iv_logo_de_qatar">Logo de Qatar</string>
+    <string name="btn_registrar">Registrar Resultado</string>
+    <string name="btn_consultar">Consultar Resultados</string>
+    <string name="tv_txt_titulo_registro">Introducir resultado.</string>
+    <string name="hint_et_fecha_hora">Introduce la fecha dd/mm/yyyy hh:mm</string>
+    <string name="hint_et_fase">Introduce la fase: Fase grupos, Octavos, Cuartos, Semifinales, Tercer puesto, Final</string>
+    <string name="txt_btn_seleccionar">Seleccionar</string>
+    <string name="hint_et_equipo1">Selecciona el equipo 1</string>
+    <string name="hint_et_equipo2">Selecciona el equipo 2</string>
+    <string name="hint_et_goles_equipo1">Goles del equipo 1</string>
+    <string name="guion">-</string>
+    <string name="hint_et_goles_equipo2">Goles del equipo 2</string>
+    <string name="btn_guardar_resultado">Guardar resultado</string>
+    <string name="btn_limpiar_datos">Limpiar datos</string>
+    <string name="tv_titulo_seleccion">Selección de equipo</string>
+
+    <!--Primer layout de equipos-->
+    <string name="txt_btn_equipo_alemania">Alemania</string>
+    <string name="txt_btn_equipo_arabiasaudi">Arabia Saudi</string>
+    <string name="txt_btn_equipo_argentina">Argentina</string>
+    <!--Segundo layout de equipos-->
+    <string name="txt_btn_equipo_australia">Australia</string>
+    <string name="txt_btn_equipo_belgica">Bélgica</string>
+    <string name="txt_btn_equipo_brasil">Brasil</string>
+    <!--Tercer layout de equipos-->
+    <string name="txt_btn_equipo_camerun">Camerún</string>
+    <string name="txt_btn_equipo_canada">Canadá</string>
+    <string name="txt_btn_equipo_coreadelsur">Corea del Sur</string>
+    <!--Cuarto layout de equipos-->
+    <string name="txt_btn_equipo_costarica">Costa Rica</string>
+    <string name="txt_btn_equipo_croacia">Croacia</string>
+    <string name="txt_btn_equipo_dinamarca">Dinamarca</string>
+    <!--Quinto layout de equipos-->
+    <string name="txt_btn_equipo_ecuador">Ecuador</string>
+    <string name="txt_btn_equipo_espana">España</string>
+    <string name="txt_btn_equipo_estadosunidos">Estados Unidos</string>
+    <!--Sexto layout de equipos-->
+    <string name="txt_btn_equipo_francia">Francia</string>
+    <string name="txt_btn_equipo_gales">Gales</string>
+    <string name="txt_btn_equipo_ghana">Ghana</string>
+    <!--Septimo layout de equipos-->
+    <string name="txt_btn_equipo_holanda">Holanda</string>
+    <string name="txt_btn_equipo_inglaterra">Inglaterra</string>
+    <string name="txt_btn_equipo_iran">Irán</string>
+    <!--Octavo layout de equipos-->
+    <string name="txt_btn_equipo_japon">Japón</string>ç
+    <string name="txt_btn_equipo_marruecos">Marruecos</string>
+    <string name="txt_btn_equipo_mexico">México</string>
+    <!--Noveno layout de equipos-->
+    <string name="txt_btn_equipo_polonia">Polonia</string>
+    <string name="txt_btn_equipo_portugal">Portugal</string>
+    <string name="txt_btn_equipo_qatar">Qatar</string>
+    <!--Decimo layout de equipos-->
+    <string name="txt_btn_equipo_senegal">Senegal</string>
+    <string name="txt_btn_equipo_serbia">Serbia</string>
+    <string name="txt_btn_equipo_suiza">Suiza</string>
+    <!--Decimo primer layout de equipos-->
+    <string name="txt_btn_equipo_tunez">Túnez</string>
+    <string name="txt_btn_equipo_uruguay">Uruguay</string>
+
+
+    <string name="hint_et_introduce_pais">Introduce el país seleccionado</string>
+    <string name="btn_aceptarSeleccionEquipo">Aceptar</string>
+    <string name="btn_cancelarSeleccionEquipo">Cancelar</string>
+    <string name="txt_tv_consulta_titulo">Consulta resultados por país</string>
+    <string name="txt_btn_limpiarDatos_consulta">Limpiar Datos</string>
+    <string name="hint_et_consulta">Introduce el país</string>
+    <string name="java_campo_vacio">"No se han introducido todos los datos, introdúcelos"</string>
+    <string name="java_campos_correctos">"Datos guardados correctamente"</string>
+    <string name="et_error_seleccion_pais">Introduce un país, no puede estar vacío.</string>
+    <string name="registro_datos_vacios">Tienes algun dato vacio</string>
+    <string name="registro_fase_incorrecta">La fase no es correcta</string>
+    <string name="registro_equipos_distintos">Los equipos no pueden ser iguales</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

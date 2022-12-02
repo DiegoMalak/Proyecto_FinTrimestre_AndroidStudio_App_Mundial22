@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="iv_margin_logo">40dp</dimen>
+    <dimen name="margen">10dp</dimen>
+    <dimen name="weight_cero_dp">0dp</dimen>
+    <dimen name="tamanio_guion">30sp</dimen>
+    <dimen name="margin_registro_items">20dp</dimen>
+    <dimen name="margin_registro_items_landscape">5dp</dimen>
+    <dimen name="txt_tv_titulo">28sp</dimen>
+    <dimen name="margin_btn_selec_equipo">5dp</dimen>
+    <dimen name="btn_registro_separa">5dp</dimen>
+    <dimen name="margin_tv_titulo_seleccion">10dp</dimen>
+    <dimen name="padding_btn_seleccion">0dp</dimen>
+    <dimen name="txt_size_btn_seleccion">12sp</dimen>
+    <dimen name="margin_tv_title_selec">5dp</dimen>
+    <dimen name="ancho_layout_botones_equipo">30dp</dimen>
+    <dimen name="txt_tv_titulo_consulta">24sp</dimen>
+    <dimen name="marginBottom_tv_consulta">20dp</dimen>
+    <dimen name="altura_btn_seleccion_pais">40dp</dimen>
+</resources>
