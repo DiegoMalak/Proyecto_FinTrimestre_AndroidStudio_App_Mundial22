@@ -2,7 +2,6 @@ package com.dam.evaluaciont1_drb;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -108,15 +107,6 @@ public class SeleccionActivity extends AppCompatActivity implements View.OnClick
 
         btnAceptar = findViewById(R.id.btnAceptar);
         btnCancelar = findViewById(R.id.btnCancelar);
-
-        /*
-        btnAlemania.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                etIntroducePais.setText(btnAlemania.getText());
-            }
-        });
-        */
 
         //Hacemos los setOnClickListener de los botones de Aceptar y Cancelar.
         //Si pulsamos Aceptar, se guardará el país introducido en el EditText.

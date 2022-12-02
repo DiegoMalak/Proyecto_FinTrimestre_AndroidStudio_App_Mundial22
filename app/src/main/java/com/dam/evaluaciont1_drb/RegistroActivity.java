@@ -4,7 +4,6 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -63,6 +62,22 @@ public class RegistroActivity extends AppCompatActivity {
 
         ActivityResultLauncher<Intent> mGetContentSelect1 =
             registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == RESULT_OK) {
+                            //Aquí se procesa el resultado de la actividad que se ha lanzado.
+                            //En este caso, el resultado es el nombre del país seleccionado.
+                            String team1 = result.getData().getStringExtra("equipo");
+                            etEquipo1.setText(team1);
+                        }
+                    }
+                }
+            );
+
+        ActivityResultLauncher<Intent> mGetContentSelect2 =
+                registerForActivityResult(
                     new ActivityResultContracts.StartActivityForResult(),
                     new ActivityResultCallback<ActivityResult>() {
                         @Override
@@ -70,27 +85,11 @@ public class RegistroActivity extends AppCompatActivity {
                             if (result.getResultCode() == RESULT_OK) {
                                 //Aquí se procesa el resultado de la actividad que se ha lanzado.
                                 //En este caso, el resultado es el nombre del país seleccionado.
-                                String team1 = result.getData().getStringExtra("equipo");
-                                etEquipo1.setText(team1);
+                                String team2 = result.getData().getStringExtra("equipo");
+                                etEquipo2.setText(team2);
                             }
                         }
                     }
-            );
-
-        ActivityResultLauncher<Intent> mGetContentSelect2 =
-                registerForActivityResult(
-                        new ActivityResultContracts.StartActivityForResult(),
-                        new ActivityResultCallback<ActivityResult>() {
-                            @Override
-                            public void onActivityResult(ActivityResult result) {
-                                if (result.getResultCode() == RESULT_OK) {
-                                    //Aquí se procesa el resultado de la actividad que se ha lanzado.
-                                    //En este caso, el resultado es el nombre del país seleccionado.
-                                    String team2 = result.getData().getStringExtra("equipo");
-                                    etEquipo2.setText(team2);
-                                }
-                            }
-                        }
                 );
 
         btnSeleccionarEquipo1.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +119,6 @@ public class RegistroActivity extends AppCompatActivity {
                 limpiarUI();
             }
         });
-
     }
 
     private void guardar() {

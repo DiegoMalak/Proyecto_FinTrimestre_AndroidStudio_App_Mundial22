@@ -18,7 +18,6 @@ import com.dam.evaluaciont1_drb.datos.Resultado;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ConsultaActivity extends AppCompatActivity {
 
