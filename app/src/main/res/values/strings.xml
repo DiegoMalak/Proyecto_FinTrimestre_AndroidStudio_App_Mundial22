@@ -18,7 +18,7 @@
 
     <!--Primer layout de equipos-->
     <string name="txt_btn_equipo_alemania">Alemania</string>
-    <string name="txt_btn_equipo_arabiasaudi">Arabia Saudi</string>
+    <string name="txt_btn_equipo_arabiasaudi">Arabia Saudí</string>
     <string name="txt_btn_equipo_argentina">Argentina</string>
     <!--Segundo layout de equipos-->
     <string name="txt_btn_equipo_australia">Australia</string>

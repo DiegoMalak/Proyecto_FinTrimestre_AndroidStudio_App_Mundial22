@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +20,6 @@ import com.dam.evaluaciont1_drb.datos.Resultado;
 import com.dam.evaluaciont1_drb.fragmentos.ResultadoFragment;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ConsultaActivity extends AppCompatActivity {
 

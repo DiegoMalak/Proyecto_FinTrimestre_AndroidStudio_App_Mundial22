@@ -13,7 +13,6 @@
         android:src="@drawable/qatar_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/iv_margin_logo"
         android:contentDescription="@string/iv_logo_de_qatar"
         />
 

@@ -134,9 +134,9 @@ public class SeleccionActivity extends AppCompatActivity implements View.OnClick
         //botón y lo pondrá en el EditText.
 
         //Primero creamos un array de botones.
-        Button[] botones = {btnAlemania, btnArgentina, btnAustralia, btnBelgica, btnBrasil,
-                btnCamerun, btnCanada, btnCoreaDelSur, btnCostaRica, btnCroacia, btnDinamarca,
-                btnEcuador, btnEspania, btnEstadosUnidos, btnFrancia, btnGales, btnGhana,
+        Button[] botones = {btnAlemania, btnArabiaSaudi, btnArgentina, btnAustralia, btnBelgica,
+                btnBrasil, btnCamerun, btnCanada, btnCoreaDelSur, btnCostaRica, btnCroacia,
+                btnDinamarca, btnEcuador, btnEspania, btnEstadosUnidos, btnFrancia, btnGales, btnGhana,
                 btnHolanda, btnInglaterra, btnIran, btnJapon, btnMarruecos, btnMexico, btnPolonia,
                 btnPortugal, btnQatar, btnSenegal, btnSerbia, btnSuiza, btnTunez, btnUruguay};
 
