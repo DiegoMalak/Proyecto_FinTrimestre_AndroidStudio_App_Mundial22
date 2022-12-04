@@ -58,16 +58,16 @@ public class Resultado implements Parcelable {
         return equipo2;
     }
 
+    public void setEquipo2(String equipo2) {
+        this.equipo2 = equipo2;
+    }
+
     public int getGolesEquipo1() {
         return golesEquipo1;
     }
 
     public void setGolesEquipo1(int golesEquipo1) {
         this.golesEquipo1 = golesEquipo1;
-    }
-
-    public void setEquipo2(String equipo2) {
-        this.equipo2 = equipo2;
     }
 
     public int getGolesEquipo2() {
