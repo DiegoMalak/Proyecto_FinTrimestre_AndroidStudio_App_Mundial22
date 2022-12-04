@@ -110,8 +110,6 @@ public class SeleccionActivity extends AppCompatActivity implements View.OnClick
 
         //Hacemos los setOnClickListener de los botones de Aceptar y Cancelar.
         //Si pulsamos Aceptar, se guardará el país introducido en el EditText.
-        //Si pulsamos Cancelar, se borrará el contenido del EditText.
-
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,6 +117,7 @@ public class SeleccionActivity extends AppCompatActivity implements View.OnClick
             }
         });
 
+        //Si pulsamos Cancelar, se borrará el contenido del EditText.
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
