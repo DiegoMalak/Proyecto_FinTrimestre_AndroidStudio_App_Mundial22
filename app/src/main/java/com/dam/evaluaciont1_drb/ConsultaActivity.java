@@ -103,6 +103,7 @@ public class ConsultaActivity extends AppCompatActivity {
                     modo = 0;
                 }
                 else if (modo == 0) {
+                    // Lanzamos la actividad de selección.
                     mGetContentPais.launch(new Intent(getApplicationContext(), SeleccionActivity.class));
                 }
             }
