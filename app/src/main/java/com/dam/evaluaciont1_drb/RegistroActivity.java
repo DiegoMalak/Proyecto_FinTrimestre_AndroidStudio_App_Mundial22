@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 public class RegistroActivity extends AppCompatActivity {
 
+    // Declaramos los elementos de la interfaz de registro.
     private EditText etFecha;
     private EditText etFase;
     private EditText etEquipo1;
@@ -29,9 +30,11 @@ public class RegistroActivity extends AppCompatActivity {
     private EditText etGolesEquipo1;
     private EditText etGolesEquipo2;
 
+    // Declaramos los botonoes de la interfaz de Guardar y Limpiar.
     private Button btnGuardar;
     private Button btnLimpiar;
 
+    // Creamos un ArrayList de las Fases validas para usarlo posteriormente.
     private ArrayList<String> fasesValidas =  new ArrayList<String>() {
         {
             add("Fase grupos");
@@ -43,11 +46,13 @@ public class RegistroActivity extends AppCompatActivity {
         }
     };
 
+    // Hacemos el OnCreate de la actividad de registro.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
+        // Inicializamos los elementos de la interfaz de registro.
         etFecha = findViewById(R.id.etFecha);
         etFase = findViewById(R.id.etFase);
         etEquipo1 = findViewById(R.id.etEquipo1);
@@ -60,12 +65,19 @@ public class RegistroActivity extends AppCompatActivity {
         btnGuardar = findViewById(R.id.btnGuardarResultado);
         btnLimpiar = findViewById(R.id.btnLimpiarDatos);
 
+        // Creamos el ActivityResultLauncher para el boton de seleccionar equipo 1.
+        // Este ActivityResultLauncher nos permite abrir la actividad de seleccionar equipo
+        // y recibir el resultado de la misma para el equipo 1.
         ActivityResultLauncher<Intent> mGetContentSelect1 =
             registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult result) {
+                        // Comprobamos que el resultado de la actividad de seleccionar equipo
+                        // no sea nulo y que el resultado sea OK, en caso de que sea asi
+                        // obtenemos el nombre del equipo seleccionado y lo mostramos en el
+                        // EditText correspondiente.
                         if (result.getResultCode() == RESULT_OK) {
                             //Aquí se procesa el resultado de la actividad que se ha lanzado.
                             //En este caso, el resultado es el nombre del país seleccionado.
@@ -76,12 +88,19 @@ public class RegistroActivity extends AppCompatActivity {
                 }
             );
 
+        // Creamos el ActivityResultLauncher para el boton de seleccionar equipo 2.
+        // Este ActivityResultLauncher nos permite abrir la actividad de seleccionar equipo
+        // y recibir el resultado de la misma para el equipo 2.
         ActivityResultLauncher<Intent> mGetContentSelect2 =
                 registerForActivityResult(
                     new ActivityResultContracts.StartActivityForResult(),
                     new ActivityResultCallback<ActivityResult>() {
                         @Override
                         public void onActivityResult(ActivityResult result) {
+                            // Comprobamos que el resultado de la actividad de seleccionar equipo
+                            // no sea nulo y que el resultado sea OK, en caso de que sea asi
+                            // obtenemos el nombre del equipo seleccionado y lo mostramos en el
+                            // EditText correspondiente.
                             if (result.getResultCode() == RESULT_OK) {
                                 //Aquí se procesa el resultado de la actividad que se ha lanzado.
                                 //En este caso, el resultado es el nombre del país seleccionado.
@@ -92,20 +111,25 @@ public class RegistroActivity extends AppCompatActivity {
                     }
                 );
 
+        // Creamos el Listener para el boton de seleccionar equipo 1.
         btnSeleccionarEquipo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Creamos un Intent para abrir la actividad de seleccionar equipo.
                 mGetContentSelect1.launch(new Intent(getApplicationContext(), SeleccionActivity.class));
             }
         });
 
+        // Creamos el Listener para el boton de seleccionar equipo 2.
         btnSeleccionarEquipo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Creamos un Intent para abrir la actividad de seleccionar equipo.
                 mGetContentSelect2.launch(new Intent(getApplicationContext(), SeleccionActivity.class));
             }
         });
 
+        // Creamos el Listener para el boton de guardar.
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +137,7 @@ public class RegistroActivity extends AppCompatActivity {
             }
         });
 
+        // Creamos el Listener para el boton de limpiar.
         btnLimpiar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,6 +146,7 @@ public class RegistroActivity extends AppCompatActivity {
         });
     }
 
+    // Creamos el metodo para guardar los datos.
     private void guardar() {
         // Comprobacion de campos vacios, en caso de que haya alguno vacio, se muestra un mensaje de error
         // y se corta la ejecucion del metodo con un return.
@@ -130,6 +156,7 @@ public class RegistroActivity extends AppCompatActivity {
                 || etEquipo2.getText().toString().trim().isEmpty()
                 || etGolesEquipo1.getText().toString().trim().isEmpty()
                 || etGolesEquipo2.getText().toString().trim().isEmpty()) {
+            // Mostramos un mensaje de error en caso de que haya algun campo vacio.
             Toast.makeText(getApplicationContext(),
                     R.string.registro_datos_vacios, Toast.LENGTH_LONG).show();
             return;
@@ -141,6 +168,7 @@ public class RegistroActivity extends AppCompatActivity {
         // Si no esta en el array, se muestra un mensaje de error y se corta la ejecucion
         // del metodo con un return.
         if (!fasesValidas.contains(etFase.getText().toString().trim())) {
+            // Mostramos un mensaje de error en caso de que la fase introducida no sea valida.
             Toast.makeText(getApplicationContext(),
                     R.string.registro_fase_incorrecta, Toast.LENGTH_LONG).show();
             return;
@@ -150,12 +178,15 @@ public class RegistroActivity extends AppCompatActivity {
         // En caso de que sean iguales, se muestra un mensaje de error y se corta la ejecucion
         // del metodo con un return.
         if (etEquipo1.getText().toString().equals(etEquipo2.getText().toString())) {
+            // Mostramos un mensaje de error en caso de que los dos equipos sean iguales.
             Toast.makeText(getApplicationContext(),
                     R.string.registro_equipos_distintos, Toast.LENGTH_LONG).show();
             return;
         }
 
-        //Mostramos un mensaje de éxito en un Toast
+        // Una vez comprobado que todos los campos estan rellenos y que la fase introducida es valida,
+        // interactuamos con los datos para simular el guardado, en este caso, simplemente mostramos
+        // un mensaje de que los datos se han guardado correctamente y limpiamos la UI.
         ListaResultados listaResultados = new ListaResultados();
         listaResultados.addResultado(new Resultado(
             etFecha.getText().toString(),
@@ -170,6 +201,7 @@ public class RegistroActivity extends AppCompatActivity {
         limpiarUI();
     }
 
+    // Creamos el metodo para limpiar la UI.
     private void limpiarUI() {
         etFecha.setText("");
         etFase.setText("");
