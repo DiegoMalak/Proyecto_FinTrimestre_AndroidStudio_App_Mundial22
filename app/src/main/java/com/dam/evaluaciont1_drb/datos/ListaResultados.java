@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 public class ListaResultados {
 
+    // Declaramos el array de resultados.
     private ArrayList<Resultado> resultadosPartidos;
 
+    // Creamos el contenido del array de resultados.
     public ListaResultados() {
         resultadosPartidos = new ArrayList<>();
         resultadosPartidos.add(new Resultado("Fase grupos", "20/11/2022 17:00", "Qatar", 0, "Ecuador", 2));
@@ -70,13 +72,14 @@ public class ListaResultados {
         resultadosPartidos.add(new Resultado("Semifinales", "14/12/2022 20:00", "Japón",0, "Argentina", 1));
         resultadosPartidos.add(new Resultado("Tercer Puesto", "17/12/2022 16:00", "Francia", 1, "Japón", 0));
         resultadosPartidos.add(new Resultado("Final", "18/12/2022 16:00", "Argentina", 1, "Brasil", 2));
-
     }
 
+    // Método para añadir los resultados de los partidos a la tabla.
     public void addResultado(Resultado resultado) {
         this.resultadosPartidos.add(resultado);
     }
 
+    // Método para obtener los resultados de los partidos y los controlamos con un bucle.
     public ArrayList<Resultado> getResultadosPorPais(String pais) {
         ArrayList<Resultado> results = new ArrayList<>();
         for (Resultado resultado : resultadosPartidos) {
