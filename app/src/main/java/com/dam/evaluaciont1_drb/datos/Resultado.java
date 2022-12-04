@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 public class Resultado implements Parcelable {
 
+    // Declaramos los atributos de la clase Resultado.
     private String fase;
     private String fecha;
     private String equipo1;
@@ -12,6 +13,7 @@ public class Resultado implements Parcelable {
     private String equipo2;
     private int golesEquipo2;
 
+    // Constructor de la clase Resultado.
     public Resultado(String fase, String fecha, String equipo1, int golesEquipo1, String equipo2, int golesEquipo2) {
         this.fase = fase;
         this.fecha = fecha;
@@ -21,6 +23,7 @@ public class Resultado implements Parcelable {
         this.golesEquipo2 = golesEquipo2;
     }
 
+    // Constructor de la clase Resultado para el Parcelable.
     protected Resultado(Parcel in) {
         this.fase = in.readString();
         this.fecha = in.readString();
@@ -30,6 +33,7 @@ public class Resultado implements Parcelable {
         this.golesEquipo2 = in.readInt();
     }
 
+    // Generamos los getters y setters de los atributos de la clase Resultado.
     public String getFase() {
         return fase;
     }
@@ -78,6 +82,8 @@ public class Resultado implements Parcelable {
         this.golesEquipo2 = golesEquipo2;
     }
 
+    // Método para mostrar los resultados de los partidos. (Creado para hacer pruebas
+    // en el logcat).
     @Override
     public String toString() {
         return "Resultado{" +
@@ -95,6 +101,7 @@ public class Resultado implements Parcelable {
         return 0;
     }
 
+    // Método para escribir los datos del objeto en el Parcel.
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.fase);
@@ -105,7 +112,7 @@ public class Resultado implements Parcelable {
         dest.writeInt(this.golesEquipo2);
     }
 
-
+    // Método para crear el objeto a partir del Parcel. (Para el Parcelable).
     public static final Creator<Resultado> CREATOR = new Creator<Resultado>() {
         @Override
         public Resultado createFromParcel(Parcel in) {
