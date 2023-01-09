@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnRegistro;
     private Button btnConsulta;
 
-    // No declaro el TextView porque no lo voy a usar.
-
     // Hacemos el OnCreate de la actividad principal.
     @Override
     protected void onCreate(Bundle savedInstanceState) {

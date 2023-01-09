@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,9 +23,13 @@ public class ResultadoFragment extends Fragment {
     private Resultado partido;
     private TextView tvResultadoFase, tvResultadoFecha, tvResultadoEquipo1, tvResultadoGoles1, tvResultadoEquipo2, tvResultadoGoles2;
 
-    public ResultadoFragment() {
+    // Lo creamos para obligarle a ir por el newInstance para crear el fragmento.
+    private ResultadoFragment() {
     }
 
+    // El newInstance es el que crea el fragmento, y el bundle es el que le pasa los datos (el partido).
+    // El parcelable es para pasar datos al fragmento  de la mejor manera.
+    // El setArguments establece los argumentos del fragmento.
     public static ResultadoFragment newInstance(Resultado resultado) {
         ResultadoFragment fragment = new ResultadoFragment();
         Bundle args = new Bundle();
@@ -35,6 +38,7 @@ public class ResultadoFragment extends Fragment {
         return fragment;
     }
 
+    // El onCreate es el que se ejecuta cuando se crea el fragmento.
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

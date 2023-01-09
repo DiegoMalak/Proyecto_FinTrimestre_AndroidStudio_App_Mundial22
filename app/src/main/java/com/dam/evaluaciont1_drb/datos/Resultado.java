@@ -96,6 +96,8 @@ public class Resultado implements Parcelable {
                 '}';
     }
 
+    // Este método es necesario para el Parcelable.
+    // Es el que se encarga de crear el objeto a partir del Parcel.
     @Override
     public int describeContents() {
         return 0;

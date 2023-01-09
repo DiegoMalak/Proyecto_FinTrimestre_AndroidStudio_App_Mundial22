@@ -92,24 +92,24 @@ public class RegistroActivity extends AppCompatActivity {
         // Este ActivityResultLauncher nos permite abrir la actividad de seleccionar equipo
         // y recibir el resultado de la misma para el equipo 2.
         ActivityResultLauncher<Intent> mGetContentSelect2 =
-                registerForActivityResult(
-                    new ActivityResultContracts.StartActivityForResult(),
-                    new ActivityResultCallback<ActivityResult>() {
-                        @Override
-                        public void onActivityResult(ActivityResult result) {
-                            // Comprobamos que el resultado de la actividad de seleccionar equipo
-                            // no sea nulo y que el resultado sea OK, en caso de que sea asi
-                            // obtenemos el nombre del equipo seleccionado y lo mostramos en el
-                            // EditText correspondiente.
-                            if (result.getResultCode() == RESULT_OK) {
-                                //Aquí se procesa el resultado de la actividad que se ha lanzado.
-                                //En este caso, el resultado es el nombre del país seleccionado.
-                                String team2 = result.getData().getStringExtra("equipo");
-                                etEquipo2.setText(team2);
-                            }
+            registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        // Comprobamos que el resultado de la actividad de seleccionar equipo
+                        // no sea nulo y que el resultado sea OK, en caso de que sea asi
+                        // obtenemos el nombre del equipo seleccionado y lo mostramos en el
+                        // EditText correspondiente.
+                        if (result.getResultCode() == RESULT_OK) {
+                            //Aquí se procesa el resultado de la actividad que se ha lanzado.
+                            //En este caso, el resultado es el nombre del país seleccionado.
+                            String team2 = result.getData().getStringExtra("equipo");
+                            etEquipo2.setText(team2);
                         }
                     }
-                );
+                }
+            );
 
         // Creamos el Listener para el boton de seleccionar equipo 1.
         btnSeleccionarEquipo1.setOnClickListener(new View.OnClickListener() {

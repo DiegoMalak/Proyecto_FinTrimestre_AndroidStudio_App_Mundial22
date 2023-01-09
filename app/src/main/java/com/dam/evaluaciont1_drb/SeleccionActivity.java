@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class SeleccionActivity extends AppCompatActivity implements View.OnClickListener {
+    // Implementamos el OnClickListener para poder usarlo en todos los botones.
+    // Así no tenemos que crear un Listener para cada botón.
 
     private Button btnAlemania, btnArabiaSaudi, btnArgentina, btnAustralia, btnBelgica, btnBrasil;
     private Button btnCamerun, btnCanada, btnCoreaDelSur, btnCostaRica, btnCroacia, btnDinamarca;
@@ -147,10 +149,11 @@ public class SeleccionActivity extends AppCompatActivity implements View.OnClick
                 etIntroducePais.setText(botones[i].getText());
             }
         }
+        // Con esta linea me habria ahorrado todas las lineas de codigo de arriba.
+        // etIntroducePais.setText(((Button) v).getText().toString());
     }
 
     private void aceptarSeleccion() {
-        // TODO: Comprobar que hay texto en el edit text
         //Vamos a controlar que el EditText no esté vacío.
         if (etIntroducePais.getText().toString().isEmpty()) {
             //Si está vacío, mostramos un Toast.

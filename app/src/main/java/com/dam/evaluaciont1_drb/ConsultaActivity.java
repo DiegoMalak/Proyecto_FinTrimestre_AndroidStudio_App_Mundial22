@@ -27,7 +27,8 @@ public class ConsultaActivity extends AppCompatActivity {
     private EditText etEquipoConsulta;
     private Button btnConsultaSeleccion;
     private FrameLayout fl1, fl2, fl3, fl4, fl5, fl6, fl7;
-    private int modo = 0; // 0 para mi va a ser que tengo boton seleccion, y 1 que tengo texto limpiar
+    private int modo = 0; // 0 para mi va a ser que tengo boton seleccion, y 1 que tengo texto limpiar.
+    // Utilizamos el 'modo' como si fuera un alternador.
 
     // Hacemos el OnCreate de la actividad de consulta.
     @Override
@@ -81,10 +82,14 @@ public class ConsultaActivity extends AppCompatActivity {
                             // se mostrarán en los 3 primeros FrameLayouts.
                             for (int i = 0; i < partidosDelPais.size(); i++) {
                                 Resultado resultadoPartidoPais = partidosDelPais.get(i);
+                                // Creo el fragment y le paso el resultado del partido. (Clase ResultadoFragment).
                                 ResultadoFragment resultadoFragment = ResultadoFragment.newInstance(resultadoPartidoPais);
+                                // Añado el fragment a la transacción.
                                 ft.add(fls[i].getId(), resultadoFragment);
                             }
-                            ft.addToBackStack(null);
+                            // El addToBackStack() es para que cuando pulsas hacia atrás deshaga el cambio del fragment.
+                            // En este caso lo quito porque me parece más adecuado que vuelva al inicio.
+                            //ft.addToBackStack(null);
                             ft.commit();
                         }
                     }
